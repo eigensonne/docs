@@ -52,4 +52,41 @@ paths:
                   error_message:
                     type: string
                     example: Contract not found
+  /contracts/land_registry_check:
+    post:
+      tags:
+        - checks
+      description: Updating the result of land registry check
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                contract_id:
+                  type: string
+                  example: e0c411c8-ba8e-425d-a313-eaeade5be468
+                outcome:
+                  type: string
+                  enum:
+                    - Passed
+                    - Failed
+                    - Pending
+                    - Unknown
+      responses:
+        '204':
+          description: success
+        '401':
+          description: unauthorised access
+        '404':
+          description: contract not found or not yet reviewed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error_message:
+                    type: string
+                    example: Contract not found
 components: {}

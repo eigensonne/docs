@@ -1,0 +1,19 @@
+openapi: 3.0.0
+servers:
+  - description: Prod server
+    url: 'https://api.eigensonne.de/finanzierung-api/v1'
+  - description: Dev server
+    url: 'https://api-local.eigensonne.de/finanzierung-api/v1'
+security:
+  - bearerAuth: []
+info:
+  version: 1.0.0
+  title: EIGENSONNE's Finanzierung API
+  description: >-
+    an API for finanzierung partners to inform us about statuses of our
+    contracts with them
+  contact:
+    email: thao.lipasti@eigensonne.de
+paths:
+  /contracts/credit_check:
+    $ref: paths/contracts@credit_check.yaml

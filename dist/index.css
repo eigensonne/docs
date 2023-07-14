@@ -10,6 +10,10 @@ html {
     box-sizing: inherit;
 }
 
+form.download-url-wrapper {
+    visibility: hidden;
+}
+
 body {
     margin: 0;
     background: #fafafa;

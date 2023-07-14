@@ -40,8 +40,6 @@ paths:
       responses:
         '204':
           description: success
-        '401':
-          description: unauthorised access
         '404':
           description: contract not found or not yet reviewed
           content:
@@ -77,8 +75,6 @@ paths:
       responses:
         '204':
           description: success
-        '401':
-          description: unauthorised access
         '404':
           description: contract not found or not yet reviewed
           content:

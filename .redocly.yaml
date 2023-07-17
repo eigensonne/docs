@@ -6,3 +6,4 @@ theme:
   openapi:
     htmlTemplate: ./docs/index.html
     colors: "#32329f"
+    title: "EIGENSONNE's Finanzierung API"

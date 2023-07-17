@@ -5,7 +5,7 @@ servers:
   - description: Dev server
     url: 'https://api-local.eigensonne.de/finanzierung-api/v1'
 security:
-  - bearerAuth: []
+  - HTTPBearer: []
 info:
   version: 1.0.0
   title: EIGENSONNE's Finanzierung API
@@ -15,7 +15,15 @@ info:
   contact:
     email: thao.lipasti@eigensonne.de
 paths:
+  /api/login_check:
+    $ref: paths/api@login_check.yaml
   /contracts/credit_check:
     $ref: paths/contracts@credit_check.yaml
   /contracts/land_registry_check:
     $ref: paths/contracts@land_registry_check.yaml
+components:
+  securitySchemes:
+    HTTPBearer:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

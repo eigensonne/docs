@@ -1,0 +1,44 @@
+post:
+  servers:
+    - url: https://api-local.eigensonne.de
+      description: Dev server
+    - url: https://api.eigensonne.de
+      description: Prod server
+  tags:
+    - Authentification
+  security: []
+  description: Fetching a token for authentification
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            username:
+              type: string
+              example: admin
+            password:
+              type: string
+              example: admin
+  responses:
+    200:
+      description: success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              token:
+                type: string
+                example: 1234567890
+    404:
+      description: user not found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error_message:
+                type: string
+                example: User not found

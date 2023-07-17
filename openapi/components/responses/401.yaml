@@ -1,0 +1,9 @@
+description: unauthorised access
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        error_message:
+          type: string
+          default: Unauthorised request

@@ -1,7 +1,7 @@
 post:
   tags:
-    - checks
-  description: updating the result of credit check
+    - Checks
+  description: Updating the result of credit check
   requestBody:
     required: true
     content:
@@ -22,6 +22,8 @@ post:
   responses:
     '204':
       description: success
+    '401':
+      $ref: '../components/responses/401.yaml'
     '404':
       description: contract not found or not yet reviewed
       content:

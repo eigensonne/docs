@@ -8,6 +8,7 @@
   "scripts": {
     "start": "openapi preview-docs",
     "build": "openapi bundle -o dist",
-    "test": "openapi lint"
+    "test": "openapi lint",
+    "html": "openapi build-docs --output=index.html"
   }
 }

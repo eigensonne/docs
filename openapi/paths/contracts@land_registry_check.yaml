@@ -1,6 +1,6 @@
 post:
   tags:
-    - checks
+    - Checks
   description: Updating the result of land registry check
   requestBody:
     required: true
@@ -32,3 +32,5 @@ post:
               error_message:
                 type: string
                 example: Contract not found
+    '401':
+        $ref: '../components/responses/401.yaml'

@@ -10,7 +10,7 @@ info:
   version: 1.0.0
   title: EIGENSONNE's Finanzierung API
   description: >-
-    an API for finanzierung partners to inform us about statuses of our
+    An API for finanzierung partners to inform us about statuses of our
     contracts with them
   contact:
     email: thao.lipasti@eigensonne.de

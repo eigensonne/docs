@@ -13,10 +13,11 @@
 Starts the reference docs preview server.
 
 #### `npm run build`
-Bundles the definition to the dist folder.
+Bundles the definition to a single file (dist.yaml).
 
-#### `npm test`
-Validates the definition.
+#### `npm run html`
+Creating the static index.html file at root level to be deployed on GitHub Pages. This is the step that must be done 
+at the end every time the OpenAPI definition is updated.
 
 ## Contribution Guide
 
@@ -238,13 +239,3 @@ post:
 You'll see extensive usage of `$ref`s in this example to different types of components including schemas.
 
 You'll also notice `$ref`s to code samples.
-
-### Code samples
-
-1. Navigate to the `openapi/code_samples` folder.
-2. Navigate to the `<language>` (e.g. PHP) sub-folder.
-3. Navigate to the `path` folder, and add ref to the code sample.
-
-You can add languages by adding new folders at the appropriate path level.
-
-More details inside the `code_samples` folder README.

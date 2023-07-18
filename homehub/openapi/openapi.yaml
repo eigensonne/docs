@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Home Hub Integration API
+  description: An API to communicate with Eigensonne's CRM
+  contact:
+    email: patrick.toner@eigensonne.de
+  version: 1.0.0
+servers:
+  - url: >-
+      https://virtserver.swaggerhub.com/PATRICKTONER/Home-Hub-Integration-v1/1.0.0
+    description: SwaggerHub API Auto Mocking
+  - url: https://api-staging.eigensonne.de/homehub/v1/
+    description: HomeHub Intergration Staging Server
+  - url: https://api.eigensonne.de/homehub/v1/
+    description: HomeHub Intergration Production Server
+security:
+  - bearerAuth: []
+paths:
+  /activationResponse/{customer_id}:
+    $ref: paths/activationResponse_{customer_id}.yaml
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer

@@ -1,11 +1,16 @@
-# EIGENSONNE&#39;s Finanzierung API OpenAPI Definition
+# EIGENSONNE&#39;s OpenAPI Definitions
+
+This repo contains multiple OpenAPI definitions for EIGENSONNE's APIs. Each can be treated as a separare repo. When 
+you run `npm run html` in the subfolders such as "finanzierung", static HTML files such as "finanzierung.html" will 
+be created in the root folder. These files will be served with GitHub Pages.
 
 ## Working on your OpenAPI Definition
 
 ### Install
 
 1. Install [Node JS](https://nodejs.org/).
-2. Clone this repo and run `npm install` in the repo root.
+2. Clone this repo
+3. Go to the folder of the API you want to work on e.g. `cd finanzierung` and run `npm install`.
 
 ### Usage
 

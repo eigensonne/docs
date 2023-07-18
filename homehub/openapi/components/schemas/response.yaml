@@ -1,0 +1,9 @@
+required:
+  - error
+  - error_message
+type: object
+properties:
+  error:
+    type: boolean
+  error_message:
+    type: string

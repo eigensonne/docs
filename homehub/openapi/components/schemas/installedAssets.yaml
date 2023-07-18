@@ -1,0 +1,14 @@
+required:
+  - asset_id
+  - network
+  - status
+type: object
+properties:
+  asset_id:
+    type: string
+    example: 0000000000Bbb0BBBB
+  status:
+    type: string
+    example: activate
+  network:
+    $ref: ./network.yaml

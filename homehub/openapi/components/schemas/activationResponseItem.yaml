@@ -1,0 +1,15 @@
+required:
+  - agent_id
+  - installed_assets
+type: object
+properties:
+  agent_id:
+    type: string
+    format: uuid
+  customer_id:
+    type: string
+    example: 0000000000Aaa0AAAA
+  installed_assets:
+    type: array
+    items:
+      $ref: ./installedAssets.yaml

@@ -1,0 +1,50 @@
+post:
+  description: communicate the response from Activation to Eigensonne's CRM
+  operationId: activationResponse
+  parameters:
+    - name: customer_id
+      in: path
+      description: Numeric ID of the user to get
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+  requestBody:
+    description: Activation response
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/activationResponseItem.yaml
+  responses:
+    '200':
+      description: response recieved
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/response.yaml
+          example:
+            error: false
+            error_message: ''
+    '400':
+      description: Invalid input, object invalid
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/response.yaml
+          example:
+            error: true
+            error_message: No Assets found
+    '401':
+      description: Unauthorised Error
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/response.yaml
+          example:
+            error: true
+            error_message: Missing Token or Invalid unauthorised to use API
+    '404':
+      description: Resource Not Found
+    '500':
+      description: Server Error

@@ -1,0 +1,11 @@
+required:
+  - ip
+  - port
+type: object
+properties:
+  ip:
+    type: string
+    example: 192.0.0.1
+  port:
+    type: string
+    example: '8080'

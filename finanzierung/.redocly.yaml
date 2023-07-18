@@ -1,0 +1,9 @@
+# See https://redoc.ly/docs/cli/configuration/ for more information.
+apis:
+  main@v1:
+    root: openapi/openapi.yaml
+theme:
+  openapi:
+    htmlTemplate: ./docs/index.html
+    colors: "#32329f"
+    title: "EIGENSONNE's Finanzierung API"

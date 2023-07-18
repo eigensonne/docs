@@ -8,6 +8,6 @@
   "scripts": {
     "start": "openapi preview-docs",
     "build": "openapi bundle -o dist",
-    "html": "openapi build-docs --output=index.html"
+    "html": "openapi build-docs -o finanzierung.html"
   }
 }
